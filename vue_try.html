@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="toggle">toggle</button>
+        <input v-if="seen" v-model="message">
+        <span v-if="seen">{{ message }}</span>
+    </div>
+    <div id="todo">
+        <ol>
+            <button-toggle v-for="item in groceryList" v-bind:text="item" v-bind:key="item.id">
+            </button-toggle>
+        </ol>
+    </div>
+
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+    <div id="app_route">
+        <p>
+            <!-- use router-link component for navigation. -->
+            <!-- specify the link by passing the `to` prop. -->
+            <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
+            <route v-for="route in routes" v-bind:route="route" v-bind:key="route.id">
+            </route>
+        </p>
+        <!-- route outlet -->
+        <!-- component matched by the route will render here -->
+        <router-view></router-view>
+    </div>
+    <script src="index_vue_try.js">
+    </script>
+</body>
+
+</html>

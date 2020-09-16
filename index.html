@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuro Mechanics - Presentation</title>
+    <link rel='stylesheet' href="css/uikit.min.css">
+    <!-- production version, optimized for size and speed -->
+    <script src="js/uikit.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+</head>
+
+<body>
+
+
+    <div class='uk-section'>
+        <div class='uk-container'>
+            <div uk-grid>
+                <div class="uk-width-1-2">
+                    <video src="videos/ex1-cut.mp4" autoplay loop uk-video></video>
+                    <div uk-grid>
+                        <div class="uk-width-1-1">
+                            <h6>Right Leg Muscles</h6>
+                        </div>
+                        <div>
+                            <button type="button" uk-toggle="target: #R_Rect;">R_RectorFemoris</button>
+                            <button type="button" uk-toggle="target: #R_Ham;">R_Hamstring</button>
+                            <button type="button" uk-toggle="target: #R_Ta;">R_TA</button>
+                            <button type="button" uk-toggle="target: #R_Gn;">R_GN</button>
+                        </div>
+                    </div>
+                    <div uk-grid>
+                        <div class="uk-width-1-1">
+                            <h6>Left Leg Muscles</h6>
+                        </div>
+                        <div>
+                            <button type="button" uk-toggle="target: #L_Rect;">L_RectorFemoris</button>
+                            <button type="button" uk-toggle="target: #L_Ham;">L_Hamstring</button>
+                            <button type="button" uk-toggle="target: #L_Ta;">L_TA</button>
+                            <button type="button" uk-toggle="target: #L_Gn;">L_GN</button>
+                        </div>
+                    </div>
+                    <div uk-grid>
+                        <div>
+                            <button type="button" uk-toggle="target: .other-vid;">toggle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-2">
+                    <div uk-grid>
+                        <div>
+                            <video id="R_Rect" src="videos/R_RectorFemoris-small.mp4" autoplay loop uk-video></video>
+                            <video id="R_Ham" class="other-vid" src="videos/R_Hamstring-small.mp4" autoplay loop
+                                uk-video></video>
+                            <video id="R_Ta" class="other-vid" src="videos/R_TA-small.mp4" autoplay loop
+                                uk-video></video>
+                            <video id="R_Gn" class="other-vid" src="videos/R_GN-small.mp4" autoplay loop
+                                uk-video></video>
+
+                        </div>
+                        <div>
+                            <video id="L_Rect" src="videos/L_RectorFemoris-small.mp4" autoplay loop uk-video></video>
+                            <video id="L_Ham" class="other-vid" src="videos/L_Hamstring-small.mp4" autoplay loop
+                                uk-video></video>
+                            <video id="L_Ta" class="other-vid" src="videos/L_TA-small.mp4" autoplay loop
+                                uk-video></video>
+                            <video id="L_Gn" class="other-vid" src="videos/L_GN-small.mp4" autoplay loop
+                                uk-video></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
